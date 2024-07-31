@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<!--[부모 템플릿을 상속 받음]-->
+
+{% block content %}
+<h2>Login</h2>
+<form method="post" action="/login">
+    <!-- method=""    [폼 데이터를 서버로 전송할 때 사용할 HTTP메서드를 지정]-->
+    <!-- psot    [post 메서드는 데이터를 안전하게 전송하며, url에 데이터가 노출되지 않음]-->
+    <!-- action=""    [폼이 제출될 떄 데이터를 처리할 서버의 url을 설정]-->
+    <span>Username</span>
+    <input type="text" id="id" name="id" required><br><br>
+    <!-- type="text"    [텍스트 입력 필드]-->
+    <!-- id=""    [입력 요소의 고유 식별자]-->
+    <!-- name=""    [서버로 전송될 때 입력 필드의 이름]-->
+    <!-- required    [필드 입력의 강제성 부여]-->
+    <span>Password</span>
+    <input type="password" id="pw" name="pw" required><br><br>
+    <input type="submit" value="Login">
+    <!-- type="submit"    [버튼 필드]-->
+</form>
+{% endblock %}
