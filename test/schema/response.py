@@ -10,7 +10,7 @@ class userDataSchema(BaseModel):
     nickName: str
     
     class Config:
-        from_attributes = True
+        orm_mode = True
     #pydantic의 orm 모드 사용(), sqlalchemy의 orm객체를 받아 pyadnatic이 사용
 
 

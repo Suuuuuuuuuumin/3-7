@@ -29,3 +29,7 @@ class userData(base):
             email = request.email,
             nickName = request.nickName
         )
+
+    def updatePw(self, newPw: str)->'userData':
+        self.pw = newPw
+        return self
